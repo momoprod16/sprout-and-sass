@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — Sprout &amp; Sass</title>
+  <meta name="description" content="Browse the full Sprout & Sass collection of punny plant-lover tees. Shop securely on Etsy." />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span class="leaf">🌱</span> Sprout &amp; Sass</a>
+      <nav class="nav">
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="index.html#contact" class="hide-sm">Contact</a>
+        <a class="btn btn-sage" href="https://www.etsy.com/shop/SproutAndSass" target="_blank" rel="noopener">Etsy Shop</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>The whole collection</h2>
+      <p class="sub">Every design is printed on demand and sold through our secure Etsy shop. Tap a design to view it on Etsy.</p>
+      <div class="grid" id="grid">
+        <!-- Cards injected below -->
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Don't see your perfect pun?</h2>
+      <p>New designs sprout up regularly — and we take custom requests.</p>
+      <a class="btn" href="mailto:momooffice1738@gmail.com">Request a design</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <div class="brand"><span class="leaf">🌱</span> Sprout &amp; Sass</div>
+          <p class="tagline">Witty, botanical-inspired apparel and gifts for people who talk to their plants.</p>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <a href="shop.html">All designs</a>
+          <a href="https://www.etsy.com/shop/SproutAndSass" target="_blank" rel="noopener">Etsy storefront</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="about.html">About us</a>
+          <a href="mailto:momooffice1738@gmail.com">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="legal">
+        <span>&copy; 2026 Sprout &amp; Sass. All rights reserved.</span>
+        <span>Purchases are fulfilled securely through our Etsy shop.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const ETSY = "https://www.etsy.com/shop/SproutAndSass";
+    const products = [
+      ["Aloe You Vera Much",        "aloe-you-vera-much.png"],
+      ["You Grow, Girl",            "you-grow-girl.png"],
+      ["I'm Rooting For You",       "im-rooting-for-you.png"],
+      ["Leaf Me Alone, I'm Reading","leaf-me-alone-reading.png"],
+      ["Resting Plant Face",        "resting-plant-face.png"],
+      ["Plant Mom Energy",          "plant-mom-energy.png"],
+      ["Mint To Be",                "mint-to-be.png"],
+      ["Crazy Plant Person",        "crazy-plant-person.png"],
+      ["Botanical and Chill",       "botanical-and-chill.png"],
+      ["Fern-ly In Love",           "fern-ly-in-love.png"],
+    ];
+    const grid = document.getElementById("grid");
+    grid.innerHTML = products.map(([name, file]) => `
+      <a class="card" href="${ETSY}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+        <div class="thumb"><img src="assets/designs/${file}" alt="${name} tee design" loading="lazy" /></div>
+        <div class="body">
+          <div class="title">${name}</div>
+          <div class="meta">Plant-pun tee</div>
+          <div class="spacer"></div>
+          <span class="btn">Shop on Etsy</span>
+        </div>
+      </a>`).join("");
+  </script>
+</body>
+</html>
