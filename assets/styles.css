@@ -50,7 +50,7 @@ img { max-width: 100%; display: block; }
 }
 .brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-head); font-size: 1.45rem; font-weight: 700; color: var(--ink); }
 .brand:hover { text-decoration: none; }
-.brand .leaf { color: var(--sage); font-size: 1.5rem; }
+.brand .leaf { width: 28px; height: 28px; display: inline-block; vertical-align: middle; }
 .nav { display: flex; gap: 26px; align-items: center; }
 .nav a { color: var(--ink-soft); font-size: 0.98rem; letter-spacing: 0.02em; }
 .nav a:hover { color: var(--sage-deep); text-decoration: none; }
@@ -151,6 +151,7 @@ img { max-width: 100%; display: block; }
 .site-footer a { color: #cdd3c6; display: block; margin-bottom: 8px; font-size: 0.95rem; }
 .site-footer a:hover { color: #fff; }
 .site-footer .brand { color: #fff; margin-bottom: 10px; }
+.site-footer .brand .leaf { filter: brightness(0) invert(1); }
 .site-footer .tagline { font-size: 0.95rem; max-width: 28em; }
 .site-footer .legal { border-top: 1px solid #3a423235; margin-top: 34px; padding-top: 20px; font-size: 0.85rem; color: #98a08c; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
 
